@@ -23,7 +23,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 SECRET_KEY = 'django-insecure-rggh(q62l57z@^9_i^nbi09jsumq*2mw3d=bzb)@_v!g&r9j9l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['firealarmsys.herokuapp.com','127.0.0.1']
 
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'fireAlarm.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -22,8 +22,8 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 
                 </ul>
-                <a class="btn btn-primary btn-sm btn-block" href="history/">HISTORY</a>
-            
+                <a class="nav-link" href="{% url 'history' %}">HISTORY</a>
+                <a class="nav-link" href="{% url 'logoutuser' %}">LOGOUT</a>
             </div>
             
 
@@ -74,7 +74,7 @@
                Host : "smtp.gmail.com",
                Username : "iit2019234@iiita.ac.in",
                Password : "Pravallika@26",
-               To : 'pravallika.kodi@gmail.com',
+               To : ["{{email}}"],
                From : "iit2019234@iiita.ac.in",
                Subject : "FIRE ALERT🔥🔥🔥",
                Body : "Warning: This is fire alert. Fire is detected!!!<br/> Be cautious and take necessary actions...<br/> "+
@@ -129,7 +129,8 @@
                    
                     sendToDashboard(sanpshot.val().temperature,sanpshot.val().gas,sanpshot.val().flame_sensor,loop);
                     if(sanpshot.val().temperature>15 && sanpshot.val().gas>=15 && sanpshot.val().flame_sensor>=18){
-                        //sendEmail(sanpshot.val().temperature,sanpshot.val().gas,sanpshot.val().flame_sensor);
+                        
+                        sendEmail(sanpshot.val().temperature,sanpshot.val().gas,sanpshot.val().flame_sensor);
                         sendalert();
                         // alert("Warning: FIRE DETECTED🔥🔥🔥")
                     }
