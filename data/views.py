@@ -26,13 +26,6 @@ def home(request):
     return render(request,'data/dashboard.html')
 
 def history(request):
-    #sensors_data = sensor_info.objects.all()
-    #print("sensors_data: ")
-    #print(sensors_data.values())
-    #<QuerySet [{'id': 4, 'flame_val': 12.0, 'smoke_val': 23.0, 'temp_val': 34.0, 'date_created': datetime.time(10, 45, 41, 14967)}]>
-
-    #for data in sensors_data.values():
-    #  print(data['flame_val'],data['smoke_val'])
     db=firebase.database()
     data=db.child("sensor_data").get().val()
     #print(data)
