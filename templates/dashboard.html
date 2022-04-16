@@ -139,7 +139,7 @@
                if(sanpshot.val()!=undefined){
                     console.log(sanpshot.val().Smoke,sanpshot.val().Flame)
                     sendToDashboard(sanpshot.val().Smoke,sanpshot.val().Flame);
-                    if(sanpshot.val().Smoke>200 && sanpshot.val().Flame==0){
+                    if(sanpshot.val().Smoke>600 && sanpshot.val().Flame==0){
                         
                        sendEmail(sanpshot.val().Smoke,sanpshot.val().Flame);
                         sendalert();
