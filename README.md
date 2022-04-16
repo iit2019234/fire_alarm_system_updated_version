@@ -13,4 +13,34 @@ Provide Wifi with given Credentials.
 ### Working of the Code
 Since code already flashed in the microcontroller hence It will sense data from the sensors and send It to spreadsheet through the Internet and update the spreadsheet in real time, Afterwards from spreadsheet we will send it to Firebase server and through that we will be showing on the WebApp and triggering Alarm.
 
+## Installation
+
+
+Create/Activate virtual environment
+
+```sh
+pip install virtualenv
+virtualenv myproject
+(go to myproject) \Scripts\activate
+```
+
+Installing Dajngo
+
+```sh
+pip install django
+```
+
+Clone Github Project
+
+
+Install Dependencies
+```sh
+(go to requirements directory) pip install -r requirements.txt
+```
+
+## Run Project
+```sh
+ python manage.py runserver
+```
+
 
