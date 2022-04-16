@@ -141,7 +141,7 @@
                     sendToDashboard(sanpshot.val().Smoke,sanpshot.val().Flame);
                     if(sanpshot.val().Smoke>200 && sanpshot.val().Flame==0){
                         
-                       // sendEmail(sanpshot.val().temperature,sanpshot.val().gas,sanpshot.val().flame_sensor);
+                       sendEmail(sanpshot.val().Smoke,sanpshot.val().Flame);
                         sendalert();
                         // alert("Warning: FIRE DETECTED🔥🔥🔥")
                     }
