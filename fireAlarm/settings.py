@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-rggh(q62l57z@^9_i^nbi09jsumq*2mw3d=bzb)@_v!g&r9j9l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['firealarmsys.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['firealarmupdatedversion.herokuapp.com','127.0.0.1']
 
 
 # Application definition
